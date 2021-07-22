@@ -29,8 +29,7 @@ ALL_MAIN()
 
         for PACKAGE in $($APTBIN install $PROGRAMS --print-uris -qq|grep http|cut -d "'" -f2);do
 
-                # wget -q "$PACKAGE"
-		dada
+                wget -q "$PACKAGE"
 
 	        if [ ! "$?" == "0" ];then
 
